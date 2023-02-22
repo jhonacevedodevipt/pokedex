@@ -11,7 +11,7 @@ export class PokedexService {
   private apiKey    : string    = '';
   private _history  : string[]  = [];
 
-  public results     : Pokemon[] = [];
+  public results    : Pokemon[] = [];
 
   get history() {
     return [...this._history];
@@ -21,7 +21,7 @@ export class PokedexService {
     this.results   = JSON.parse(localStorage.getItem('result')!)  || [];
   }
 
-  buscarPokemon( query: string = '') {
+  searchPokemon( query: string = '') {
     query = query.trim().toLowerCase();
 
     if(!this._history.includes(query)){
