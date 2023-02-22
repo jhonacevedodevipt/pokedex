@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { PokedexService } from '../services/pokedex.service';
 
 @Component({
   selector: 'app-response',
   templateUrl: './response.component.html',
   styleUrls: ['./response.component.css']
 })
-export class ResponseComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+export class ResponseComponent {
+  get results() {
+    return this.pokedexService.results;
   }
+
+  constructor( private pokedexService: PokedexService ) { } // importa el servicio en el constructor
 
 }

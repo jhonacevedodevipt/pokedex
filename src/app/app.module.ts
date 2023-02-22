@@ -9,7 +9,6 @@ import { PokedexModule } from './pokedex/pokedex.module';
 @NgModule({
   declarations: [
     AppComponent,
-
   ],
   imports: [
     BrowserModule,
